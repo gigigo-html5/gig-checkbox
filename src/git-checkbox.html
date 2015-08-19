@@ -18,9 +18,9 @@
             border-radius: 3px;
             -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
             box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-            -webkit-transition: all .3s ease-in-out 0s;
-            -o-transition: all .3s ease-in-out 0s;
-            transition: all .3s ease-in-out 0s;
+            -webkit-transition: background-color .3s ease-in-out 0s;
+            -o-transition: background-color .3s ease-in-out 0s;
+            transition: background-color .3s ease-in-out 0s;
             cursor: pointer;
             float: left;
         }
@@ -78,7 +78,7 @@
     <template>
 
         <div class="field-check">
-            <div class$="{{getClassList(checked, errorMessage)}}" on-click="_clickCheck"></div>
+            <div class="checkbox" class$="[[getClassList(checked, errorMessage)]]" on-click="_clickCheck"></div>
 
             <input type="checkbox"
                    checked$="[[checked]]"
@@ -104,8 +104,6 @@
             var self;
 
             Polymer({
-                ready: function() {
-                },
                 _clickCheck: function() {
                     this.checked = !this.checked;
                 },
@@ -120,13 +118,17 @@
                         classList += ' error';
                     }
 
-
                     return classList;
                 },
                 properties: {
                     checked: {
                         type: Boolean,
+                        notify: true,
                         value: false
+                    },
+                    errorMessage: {
+                        type: String,
+                        value: ''
                     }
                 }
             })
