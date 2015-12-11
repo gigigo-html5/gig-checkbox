@@ -1,6 +1,6 @@
 <!--
  Webcomponents to manage and generate input type checkbox
- @version v0.0.1 - 2015-08-19
+ @version v0.0.1 - 2015-12-11
  @link https://github.com/gigigo-html5/gig-checkbox
  @author Pedro José Peña Jerez <pedro.jose@gigigo.com>
  @license MIT License, http://www.opensource.org/licenses/MIT
@@ -113,6 +113,13 @@
             Polymer({
                 _clickCheck: function() {
                     this.checked = !this.checked;
+                    this.fire('change');
+                },
+                listeners: {
+                    'change' : 'changeValue'
+                },
+                changeValue: function(value) {
+
                 },
                 getClassList: function(checked, errorMessage) {
                     var classList = 'checkbox';
@@ -131,7 +138,8 @@
                     checked: {
                         type: Boolean,
                         notify: true,
-                        value: false
+                        value: false,
+                        reflectToAttribute: true
                     },
                     errorMessage: {
                         type: String,

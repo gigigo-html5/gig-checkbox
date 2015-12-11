@@ -106,6 +106,13 @@
             Polymer({
                 _clickCheck: function() {
                     this.checked = !this.checked;
+                    this.fire('change');
+                },
+                listeners: {
+                    'change' : 'changeValue'
+                },
+                changeValue: function(value) {
+
                 },
                 getClassList: function(checked, errorMessage) {
                     var classList = 'checkbox';
@@ -124,7 +131,8 @@
                     checked: {
                         type: Boolean,
                         notify: true,
-                        value: false
+                        value: false,
+                        reflectToAttribute: true
                     },
                     errorMessage: {
                         type: String,

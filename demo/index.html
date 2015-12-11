@@ -26,6 +26,13 @@
         <gig-checkbox label="Prueba"></gig-checkbox>
     </div>
 
+    <script>
+        var check = document.querySelector('gig-checkbox');
+        check.addEventListener('change', function() {
+            console.log(check.checked)
+        })
+    </script>
+
 </body>
 
 </html>
