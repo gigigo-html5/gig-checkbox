@@ -12,18 +12,30 @@
         body {
             margin: 0;
             padding: 0;
+            font-family: sans-serif;
         }
 
         .field {
             padding: 10px;
         }
 
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
 
     </style>
 </head>
-<body>
+<body unresolved>
     <div class="field">
-        <gig-checkbox label="Prueba"></gig-checkbox>
+        <label>Checkbox</label>
+        <gig-checkbox label="Example"></gig-checkbox>
+    </div>
+
+    <div class="field">
+        <label>Checkbox with error</label>
+        <gig-checkbox label="Example with error" error-message="This field is required"></gig-checkbox>
     </div>
 
     <script>
