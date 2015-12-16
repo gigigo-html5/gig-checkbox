@@ -37,7 +37,7 @@
             transition: background-color .3s ease-in-out 0s;
             cursor: pointer;
             float: left;
-            margin: 0;
+            margin: 0
         }
 
         .checkbox.checked {
@@ -133,10 +133,13 @@
                     }
                 },
                 changeValue: function(e) {
-                    if (this.checked) {
-                        this.errorShow = false;
-                    } else {
-                        this.errorShow = true;
+
+                    if (this.errorMessage) {
+                        if (this.checked) {
+                            this.errorShow = false;
+                        } else {
+                            this.errorShow = true;
+                        }
                     }
                 },
                 getClassList: function(checked, errorMessage) {
