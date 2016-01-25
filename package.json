@@ -1,6 +1,6 @@
 {
   "name": "gig-checkbox",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Webcomponents to manage and generate input type checkbox",
   "main": "gruntfile.js",
   "scripts": {
