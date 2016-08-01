@@ -1,6 +1,6 @@
 {
   "name": "gig-checkbox",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "homepage": "https://github.com/gigigo-html5/gig-checkbox",
   "authors": [
     "Pedro Peña <pedro.jose@gigigo.com>"
@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "~1.2.0",
-    "components-font-awesome": "~4.4.0"
+    "polymer": "^1.6.0",
+    "gig-icon": "^0.1.1"
   }
 }
