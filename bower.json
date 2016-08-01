@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "~1.2.0",
-    "gig-icon": "~0.0.1"
+    "polymer": "^1.6.0",
+    "gig-icon": "^0.1.1"
   }
 }
