@@ -1,6 +1,6 @@
 {
   "name": "gig-checkbox",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Webcomponents to manage and generate input type checkbox",
   "main": "gulpfile.js",
   "scripts": {
